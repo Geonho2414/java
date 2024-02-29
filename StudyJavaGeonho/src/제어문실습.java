@@ -46,5 +46,22 @@ public class 제어문실습 {
         } else {
             System.out.println("F학점");
         }
+
+        //관계가 없는 조건을 if else로 선정하면 안됨, 아래 예시는 잘못된 예시
+       /* int num = 4;
+        if (num > 0) {
+            System.out.println("num은 양수");
+        } else if (num% 2==0) {
+            System.out.println("num은 짝수");
+        }*/
+
+        //독립적인 if문으로 만들어라
+        int num = 4;
+        if (num >0){
+            System.out.println("num은 양수");
+        }
+        if (num % 2==0){
+            System.out.println("num은 짝수");
+        }
     }
 }
