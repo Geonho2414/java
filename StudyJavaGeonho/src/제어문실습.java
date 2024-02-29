@@ -31,5 +31,19 @@ public class 제어문실습 {
         } else {
             System.out.println("a,b,c는 false");
         }
+
+        // 범위 조건식 (100퍼센트 범위를 커버해야함 중요!)
+        int score = 91;
+        if (score >= 90) {
+            System.out.println("A학점");
+        } else if (score >= 80 && score < 90) {
+            System.out.println("B학점");
+        } else if (score >= 70 && score < 80) {
+            System.out.println("C학점");
+        } else if (score >= 60 && score < 70) {
+            System.out.println("D학점");
+        } else {
+            System.out.println("F학점");
+        }
     }
 }
