@@ -63,5 +63,30 @@ public class 제어문실습 {
         if (num % 2==0){
             System.out.println("num은 짝수");
         }
+        //if문 속에 if문
+        if (true){
+            if (true){
+                if (true){
+                    System.out.println("it문 속에 if문");
+                    System.out.println();
+                }
+            }
+        }
+        //Switch case
+        int X = 2;
+        switch (X) {
+            case 1:
+                System.out.println("A");
+                break;
+            case 2:
+                System.out.println("B");
+                break;
+            case 3:
+                System.out.println("C");
+                break;
+            default:
+                System.out.println("D");
+                break;
+        }
     }
 }
