@@ -73,7 +73,8 @@ public class 제어문실습 {
             }
         }
         //Switch case
-        int X = 2;
+        //가끔 함께 실행하기 위해서 break를 쓰는 경우가 있다
+        int X = 3;
         switch (X) {
             case 1:
                 System.out.println("A");
