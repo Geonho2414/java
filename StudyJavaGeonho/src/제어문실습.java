@@ -33,6 +33,7 @@ public class 제어문실습 {
         }
 
         // 범위 조건식 (100퍼센트 범위를 커버해야함 중요!)
+        // 중복해당 되도록 조건을 만들면 안됨
         int score = 91;
         if (score >= 90) {
             System.out.println("A학점");
