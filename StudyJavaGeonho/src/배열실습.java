@@ -1,6 +1,4 @@
-package 배열실습;
-
-public class Java {
+public class 배열실습 {
     public static void main(String[] args) {
 
         //배열
@@ -14,8 +12,10 @@ public class Java {
             }
         }*/
 
-        //배열 예시
+        //배열의 기본 선언법
         int[] intArray = {1, 2, 3, 4, 5};
         System.out.println(intArray);
+
+        int[] intArray2 = new int[5];
     }
 }
