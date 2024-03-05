@@ -19,7 +19,7 @@ public class ch5_arrayTraining3 {
         System.out.println(Arrays.toString(intList2)); // [10, 4, 5]
         System.out.println(Arrays.toString(intList1)); // [10, 4, 5]
 
-        
+
         //배열과 for 문의 사용
         //조건식에 배열의 갯수(length)를 적어 사용
         for (int i=0; i<intList2.length; i++) {
