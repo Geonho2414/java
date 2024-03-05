@@ -43,7 +43,7 @@ public class 배열실습 {
         str2[0] = "white";
         System.out.println("2" + str2[0]);
         System.out.println("3" + str1[0]);
-        //기본자료형의 복사 (= 값보사)
+        //기본자료형의 복사 (= 값복사)
         int a = 3;
         int b = a;
         System.out.println("1 " + b);
