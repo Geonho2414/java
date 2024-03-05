@@ -18,6 +18,6 @@ public class ch5_arrayTraining2 {
         }
         System.out.println();
 
-        
+
     }
 }
