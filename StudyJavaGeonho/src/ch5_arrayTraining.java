@@ -1,4 +1,4 @@
-public class 배열실습 {
+public class ch5_arrayTraining {
     public static void main(String[] args) {
 
         //배열

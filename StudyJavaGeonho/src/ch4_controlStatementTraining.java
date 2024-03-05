@@ -1,5 +1,4 @@
-public class 제어문실습 {
-
+public class ch4_controlStatementTraining {
     public static void main(String[] args) {
         //if 단독사용
         boolean x = true;
