@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class ch5_arrayTraining4_String {
     public static void main(String[] args) {
@@ -134,16 +135,18 @@ public class ch5_arrayTraining4_String {
         System.out.println(str12.equals(str13));
         System.out.println(str12.equalsIgnoreCase(str13));
 
-        //길이가 10인 배열에 1부터 10까지 값을 입력하시오
+
+        // 1.길이가 10인 배열에 1부터 10까지 값을 입력하시오
+        //내 생각
         int[] array = {1,2,3,4,5,6,7,8,9,10};
         System.out.println(Arrays.toString(array));
-
+        //강사님의 답
         int[] intList1 = new int[10];
         for (int i=0 ; i<10 ; i++) {
             intList1[i] = i + 1;
         }
         System.out.println(Arrays.toString(intList1));
-
+        //++
         int[] intList2 = new int[3];
         int[] intList3 = {100, 200, 300};
         for (int i=0 ; i<3 ; i++) {
@@ -151,14 +154,16 @@ public class ch5_arrayTraining4_String {
         }
         System.out.println(Arrays.toString(intList3));
 
-        //길이가 10인 배열에 1부터 10까지 값을 거꾸로 입력하시오
+
+        // 2.길이가 10인 배열에 1부터 10까지 값을 거꾸로 입력하시오
+        // 내가 생각한 답
         int[] intList4 = new int[10];
         int[] intList5 = {10,9,8,7,6,5,4,3,2,1};
         for (int i=0 ; i<10 ; i++) {
             intList4[i] = intList5[i];
         }
         System.out.println(Arrays.toString(intList4));
-
+        //강사님의 답
         int[] intList6 = new int[10];
         int len = intList6.length;
         for (int i=0 ; i<intList6.length ; i++) {
@@ -167,7 +172,8 @@ public class ch5_arrayTraining4_String {
         }
         System.out.println(Arrays.toString(intList6));
 
-        //아래 과일 배열에 "사과"가 몇번 들어있는지 확인
+
+        // 3. 아래 과일 배열에 "사과"가 몇번 들어있는지 확인
         String[] fruitList = {"배", "사과", "바나나", "딸기", "사과", "수박"};
         int count = 0;
         for (int i=0; i<fruitList.length; i++) {
@@ -176,5 +182,91 @@ public class ch5_arrayTraining4_String {
             }
         }
         System.out.println(count);
+
+        //자바에서 사용자 입력을 받는 법
+        Scanner sc = new Scanner(System.in);
+        System.out.print("0~6까지 숫자를 입력해주세요 : ");
+        int inputNumber = sc.nextInt();
+        if (inputNumber >=0 && inputNumber <=6) {
+            System.out.println(inputNumber);
+        }else {
+            System.out.println("잘못 입력하셨습니다.");
+        }
+        System.out.print(inputNumber);
+
+
+        //자바에서 문자열을 입력받는 방법
+        Scanner sc1 = new Scanner(System.in);
+        System.out.print("이름을 입력해주세요 : ");
+        String inputStr = sc1.nextLine();
+        System.out.println(inputStr);
+
+
+        // 4. 사용자로부터 1~7까지 숫자를 입력 받아 아래 배열에 해당하는 요일을 출력
+        // 내가 적은 코드
+        char[] week = {'일','월','화','수','목','금','토'};
+        Scanner sc2 = new Scanner(System.in);
+        System.out.print("1~7까지 숫자를 입력해주세요 : ");
+        int inputNumber1 = sc2.nextInt();
+        if (inputNumber1 == 1) {
+            System.out.println(week[0]);
+        }else if(inputNumber1 == 2){
+            System.out.println(week[1]);
+        }else if(inputNumber1 == 3){
+            System.out.println(week[2]);
+        }else if(inputNumber1 == 4){
+            System.out.println(week[3]);
+        }else if(inputNumber1 == 5){
+            System.out.println(week[4]);
+        }else if(inputNumber1 == 6){
+            System.out.println(week[5]);
+        }else if(inputNumber1 == 7) {
+            System.out.println(week[6]);
+        }else {
+            System.out.println("잘못 입력하셨습니다.");
+        }
+        //강사님이 적은 코드
+        char[] week1 = {'일','월','화','수','목','금','토'};
+        Scanner sc3 = new Scanner(System.in);
+        System.out.print("1~7까지 숫자를 입력해주세요 : ");
+        int num = sc3.nextInt();
+        for(int i=0; i< week.length; i++) {
+            if (num >= 0 && num <=6) {
+                System.out.println(week[num]);
+                break;
+            }else {
+                System.out.println("잘못 입력하셨습니다");
+            }
+        }
+
+        
+        //5. 사용자로부터 이름을 입력받아 아래 회원배열에 있는 이름이면
+        //"~~~님 환영합니다" 출력
+        //없으면 "회원 가입해주세요"를 출력 (단, 대소문자를 구분하지 마시오)
+        String[]members = {"Steve", "Tom", "Michael", "Laura", "Jessica", "Annie"};
+        Scanner sc4 = new Scanner(System.in);
+        System.out.print("이름을 입력해주세요 : ");
+        String inputStr1 = sc4.nextLine();
+        boolean found = false;
+        for(int i=0; i< members.length; i++) {
+            if (members[i].equalsIgnoreCase(inputStr1)) {
+                System.out.println("환영합니다");
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            System.out.println("잘못 입력하셨습니다");
+        }
+        //또 다른 방법
+        /*for (int i=0; i< members.length; i++);{
+            if (members[i].equalsIgnoreCase(inputStr1.toLowerCase())) {
+                System.out.println(members[i] + "님 환영합니다");
+                break;
+            }
+        }
+        if (i == members.length - 1) {
+            System.out.println("회원가입해주세요");*/
     }
 }
+
