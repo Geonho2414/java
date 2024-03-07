@@ -349,7 +349,8 @@ public class ch5_arrayTraining4_String {
         System.out.println();
 
 
-        // 난수 생성법, random 숫자 만드는 법 + 로또 만들기
+        // 9. 난수 생성법, random 숫자 만드는 법 + 로또 만들기
+        // 내 답
         Random rd = new Random();
         //int randNum = rd.nextInt(45)+1; //0부터 입력한 정수값 -1 범위에서 랜덤
         int[] gh = new int[6];
@@ -357,5 +358,32 @@ public class ch5_arrayTraining4_String {
             int randNum = rd.nextInt(45)+1; //0부터 입력한 정수값 -1 범위에서 랜덤
             System.out.println(randNum);
         }
+
+        //강사님 답
+        /*Random randClass = new Random();
+        int[] rottoList = new int[6];
+        for (int i=0; i<rottoList.length; i++) {
+            int temp = randClass.nextInt(45)+1; //0부터 입력한 정수값 -1 범위에서 랜덤
+            for (int j=0; j<i; j++) {
+                if (rottoList[j] == temp) {
+                    temp = randClass.nextInt(45)+1;
+                    j = -1;
+                }
+            }
+            rottoList[i] = temp;
+        }
+        System.out.println(Arrays.toString(rottoList));*/
+//강사님 답 2
+        Random randClass = new Random();
+        int[] rottoList = new int[6];
+        for (int i=0; i<rottoList.length; i++) {
+            rottoList[i] = randClass.nextInt(45)+1; //0부터 입력한 정수값 -1 범위에서 랜덤
+            for (int j=0; j<i; j++) {
+                if (rottoList[j] == rottoList[i]) {
+                    i--; // or i = i - 1;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(rottoList));
     }
 }
