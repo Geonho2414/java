@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class ch5_arrayTraining4_String {
@@ -204,7 +206,7 @@ public class ch5_arrayTraining4_String {
 
         // 4. 사용자로부터 1~7까지 숫자를 입력 받아 아래 배열에 해당하는 요일을 출력
         // 내가 적은 코드
-        char[] week = {'일','월','화','수','목','금','토'};
+        /*char[] week = {'일','월','화','수','목','금','토'};
         Scanner sc2 = new Scanner(System.in);
         System.out.print("1~7까지 숫자를 입력해주세요 : ");
         int inputNumber1 = sc2.nextInt();
@@ -237,7 +239,7 @@ public class ch5_arrayTraining4_String {
             }else {
                 System.out.println("잘못 입력하셨습니다");
             }
-        }
+        }*/
 
         
         //5. 사용자로부터 이름을 입력받아 아래 회원배열에 있는 이름이면
@@ -258,15 +260,102 @@ public class ch5_arrayTraining4_String {
         if (!found) {
             System.out.println("잘못 입력하셨습니다");
         }
+
         //또 다른 방법
         /*for (int i=0; i< members.length; i++);{
-            if (members[i].equalsIgnoreCase(inputStr1.toLowerCase())) {
+            if (members[i].equalsIgnoreCase(inputStr1)) {
                 System.out.println(members[i] + "님 환영합니다");
                 break;
             }
         }
         if (i == members.length - 1) {
-            System.out.println("회원가입해주세요");*/
+            System.out.println("회원가입해주세요");
+            }
+           */
+
+        //또 다른 방법
+      /*  int i = 0;
+        for ( ; i< members.length; i++);{
+            if (members[i].equalsIgnoreCase(inputStr1)) {
+                System.out.println(members[i] + "님 환영합니다");
+                break;
+            }
+        }
+        if (i == members.length) {
+            System.out.println("회원가입해주세요");
+        }*/
+
+
+        // 6.입력받은 값보다 큰 수만 출력하시오
+        int[] intList = {1,2,3,4,5,6,7,8,9,10};
+        Scanner scan = new Scanner(System.in);
+        System.out.print("0~10까지 숫자를 입력해주세요 : ");
+        int num1 = scan.nextInt();
+       /* for (int i=0; i<intList.length; i++) {
+            if (intList[i] > num1);{
+                System.out.print(intList[i] + " ");
+            }
+        }*/
+
+        // 새로운 배열에 담기
+        /*int[] intList10 = new int[intList.length];
+        int count1 = 0;
+        for (int i=0; i<intList.length; i++) {
+            if (intList[i] > num1);{
+                intList10[count] = intList[i];
+                count = count + 1;
+            }
+        }
+        System.out.print(Arrays.toString(intList10));*/
+
+        //새로운 배열에 담기 : ArrayList 사용하기
+        ArrayList<Integer> intList7 = new ArrayList<Integer>();
+        for(int i=0; i< intList.length; i++) {
+            if (intList[i] > num1) {
+                intList7.add(intList[i]);
+            }
+        }
+        System.out.print(intList7.toString());
+        System.out.println();
+
+
+        // 7. 아래 배열의 총합과 평균을 구하시오
+        int[] numberList = {12, 34, 56, 32, 84, 99, 73, 69};
+        int sum = 0;
+        for (int i=0; i<numberList.length; i++) {
+            sum = sum + numberList[i];
+        }
+        int average = sum / numberList.length;
+        System.out.println(sum+" "+average);
+
+        // 8. 사용자로부터 문자열을 입력 받아서 입력받은 문자열을 거꾸로 출력
+        Scanner sc5 = new Scanner(System.in);
+        System.out.print("문자를 입력해주세요 : ");
+        String inputStr2 = sc4.nextLine();
+        char[] charList1 = inputStr2.toCharArray();
+        char[] charList2 = new char[charList1.length];
+        int index = charList2.length - 1;
+        for (int i=0 ; i< charList1.length; i++) {
+            charList2[index] = charList1[i];
+            index = index - 1;
+        }
+        // 배열 형태로 출력
+        System.out.println(Arrays.toString(charList2));
+        // 문자열로 출력하기 위해 반복문 사용
+        for (int i=0; i< charList2.length; i++) {
+            System.out.print(charList2[i]);
+        }
+        System.out.println();
+        System.out.println();
+
+
+        // 난수 생성법, random 숫자 만드는 법 + 로또 만들기
+        Random rd = new Random();
+        //int randNum = rd.nextInt(45)+1; //0부터 입력한 정수값 -1 범위에서 랜덤
+        int[] gh = new int[6];
+        for (int i=0; i<gh.length; i++) {
+            int randNum = rd.nextInt(45)+1; //0부터 입력한 정수값 -1 범위에서 랜덤
+            System.out.println(randNum);
+        }
     }
 }
-
