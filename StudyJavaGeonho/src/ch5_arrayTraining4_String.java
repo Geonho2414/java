@@ -382,5 +382,38 @@ public class ch5_arrayTraining4_String {
             }
         }
         System.out.println(Arrays.toString(rottoList));
+
+
+        //10 양의 정수 10개를 입력, 배열에 담고 3의 배수만 화면에 출력
+
+        //내 답
+        Scanner scanner = new Scanner(System.in);
+        int[] numbers = new int[10]; // 10개의 양의 정수를 담을 배열 생성
+        // 사용자로부터 양의 정수 10개 입력 받기
+        System.out.println("양의 정수 10개를 입력하세요:");
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print("정수를 입력하세요: ");
+            numbers[i] = scanner.nextInt();
+        }
+        System.out.println("3의 배수:");
+        // 배열에서 3의 배수인지 확인하고 출력하기
+        for (int number : numbers) {
+            if (number % 3 == 0) {
+                System.out.println(number);
+            }
+        }
+        
+        //선생님 답
+        // 10. 양의 정수 10개를 입력받아 배열에 담고 3의 배수만 출력
+       Scanner sc6 = new Scanner(System.in);
+       int[] intArray = new int[10];
+       for (int i=0; i< intArray.length; i++) {
+          intArray[i] = sc6.nextInt();
+       }
+       for (int i=0; i< intArray.length; i++) {
+          if (intArray[i] % 3 == 0) {
+            System.out.print(intArray[i] + " ");
+          }
+       }
     }
 }
