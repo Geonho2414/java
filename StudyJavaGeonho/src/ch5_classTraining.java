@@ -73,3 +73,4 @@ public class ch5_classTraining {
         System.out.println(this.name + " " + this.age + " " + this.address + " " + this.mbti + " " + this.personalNum);
     }
 }   // 실습결과는 main class 에 출력하였다.
+
