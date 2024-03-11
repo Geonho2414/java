@@ -60,6 +60,15 @@ public class ch5_classTraining {
         this.mbti = mbti;
         this.personalNum = personalNum;
     }
+
+    public ch5_classTraining(String name, int age, String address) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+        this.mbti = mbti;
+        this.personalNum = personalNum;
+    }
+
     public void displayName() { // 메소드
         System.out.println(this.name);
     }
