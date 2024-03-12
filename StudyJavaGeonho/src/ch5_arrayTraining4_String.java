@@ -415,5 +415,39 @@ public class ch5_arrayTraining4_String {
             System.out.print(intArray[i] + " ");
           }
        }
+       //아래 배열의 모든 답들을 다른 배열에 복사하기
+        int[] intArray3 = {1,2,3,4,5};
+       int[] intArray4;
+           intArray4 = intArray3;
+           System.out.println(Arrays.toString(intArray4));
+       //강사님 답
+        int[] intArray5 = {1,2,3,4,5};
+        int[] intArray6 = new int[intArray5.length];
+        for (int i=0; i< intArray5.length; i++) {
+            intArray6[i] = intArray5[i];
+        }
+        System.out.println(Arrays.toString(intArray6));
+
+
+       //아래 배열 읽어보고 파악해보기
+        int [] arr = new int [] {1, 2, 8, 3, 2, 2, 2, 5, 1};
+        int [] fr = new int [arr.length];
+        int visited = -1;
+        for(int i = 0; i < arr.length; i++){
+            int count1 = 1;
+            for(int j = i+1; j < arr.length; j++){
+                if(arr[i] == arr[j]){
+                    count1++;
+                    fr[j] = visited;
+                }
+            }
+            if(fr[i] != visited)
+                fr[i] = count1;
+        }
+
+        for(int i = 0; i < fr.length; i++){
+            if(fr[i] != visited)
+                System.out.println("    " + arr[i] + "    |    " + fr[i]);
+        }
     }
 }
