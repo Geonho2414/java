@@ -1,12 +1,14 @@
+import ch6.ch6_classTraining;
+
 public class Main {
 
     public static void main(String[] args) {
         System.out.println("Hello");
 
         //ch7_classTraining 실습
-        ch5_classTraining Raina = new ch5_classTraining("Raina", 21, "평택", "enfp", 040615);
-        ch5_classTraining Tom = new ch5_classTraining("Tom", 22, "대전", "entj",123456);
-        ch5_classTraining Paul = new ch5_classTraining();
+        ch6_classTraining Raina = new ch6_classTraining("Raina", 21, "평택", "enfp", 040615);
+        ch6_classTraining Tom = new ch6_classTraining("Tom", 22, "대전", "entj",123456);
+        ch6_classTraining Paul = new ch6_classTraining();
 //        Paul.name = "paul";
 //        Paul.age = 23;
 //        Paul.address = "계룡";
