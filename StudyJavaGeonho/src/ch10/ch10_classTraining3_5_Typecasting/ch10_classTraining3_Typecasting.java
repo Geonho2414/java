@@ -1,4 +1,4 @@
-package ch10;
+package ch10.ch10_classTraining3_5_Typecasting;
 
 class AA {}
 class BB extends AA {}

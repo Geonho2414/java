@@ -1,4 +1,4 @@
-package ch10.Super;
+package ch10.ch10_classTraining6_Super;
 
 class A{
     A(){
