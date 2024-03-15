@@ -1,4 +1,4 @@
-package ch6;
+package ch7.ch7;
 
 public class ch6_classTraining {
     private String name;
