@@ -7,7 +7,7 @@ public class Triangle implements Shape {
     public Triangle() {
     }
 
-    public Triangle(double length, double width, double high) {
+    public Triangle(double length, double high) {
         this.length = length;
         this.high = high;
     }
