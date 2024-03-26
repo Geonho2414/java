@@ -1,10 +1,10 @@
 package ch12;
 
-public class JavaChild extends JavaAbstract{
-    public JavaChild() {
+public class ch12_2_JavaChild extends ch12_1_JavaAbstract {
+    public ch12_2_JavaChild() {
         super();
     }
-    public JavaChild(int a, String b) {
+    public ch12_2_JavaChild(int a, String b) {
         super(a, b);
     }
 

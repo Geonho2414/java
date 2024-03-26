@@ -1,17 +1,17 @@
 package ch12;
 
-abstract public class JavaAbstract {
+abstract public class ch12_1_JavaAbstract {
     // 필드
     int a;
     String b;
 
     // 생성자
-    public JavaAbstract() {
+    public ch12_1_JavaAbstract() {
         this.a = 10;
         this.b = "default";
     }
 
-    public JavaAbstract(int a, String b) {
+    public ch12_1_JavaAbstract(int a, String b) {
         this.a = a;
         this.b = b;
     }
