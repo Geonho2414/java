@@ -35,7 +35,10 @@ class A {
             if (num>70)
                 System.out.println("정상작동");
             else
+            //예제
                 throw me1; //예외를 던진시점에 예외 발생
+            //일반적으로 많이 쓰는 방법
+                throw new MyException();
         } catch (MyException e) {
             System.out.println("예외처리 1");
         }
