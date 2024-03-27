@@ -2,7 +2,7 @@ package ch5;
 
 import java.util.Arrays;
 
-public class ch5_arrayTraining2 {
+public class ch5_2_arrayTraining2 {
     public static void main(String[] args) {
 
         //배열 선언법

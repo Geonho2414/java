@@ -1,8 +1,6 @@
 package ch5;
 
-import java.util.Arrays;
-
-public class ch5_arrayTraining5_practice {
+public class ch5_5_arrayPractice {
     public static void main(String[] args) {
         //1
         // 아래 배열중에 짝수만 출력

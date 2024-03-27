@@ -2,7 +2,7 @@ package ch5;
 
 import java.util.Arrays;
 
-public class ch5_arrayTraining3 {
+public class ch5_3_arrayTraining3 {
     public static void main(String[] args) {
 
         //기본 자료형(스택)의 복사

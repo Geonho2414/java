@@ -2,7 +2,7 @@ package ch5;
 
 import java.util.*;
 
-public class ch5_arrayTraining4_String {
+public class ch5_4_String {
     public static void main(String[] args) {
 
         //String class 특징1

@@ -1,6 +1,6 @@
 package ch5;
 
-public class ch5_arrayTraining {
+public class ch5_1_arrayTraining {
     public static void main(String[] args) {
 
         //배열
