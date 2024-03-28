@@ -21,7 +21,5 @@ public class Q2 {
         System.out.println("온도를 입력하시오 : ");
         double temp = sc.nextDouble();
         double result;
-
-
     }
 }
