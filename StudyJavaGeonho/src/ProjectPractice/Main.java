@@ -53,12 +53,5 @@ public class Main {
                 System.out.print("수강생 이름 " + lectureRegistrations.get(i).getUserId() + " / ");
             }
         }
-        for (int i = 0; i < users.size(); i++) {
-            if (users.get(i).getLoginId() == lectureRegistration1.getUserId()) {
-                System.out.println("로그인 아이디 : " + users.get(i).getLoginId());
-            } else if(users.get(i).getLoginId() != lectureRegistration1.getUserId()){
-                System.out.println("h");
-            }
-        }
     }
 }
