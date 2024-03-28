@@ -1,4 +1,4 @@
-import ch7.ch7.ch6_classTraining;
+import ch7.ch6_classTraining;
 
 public class Main {
 

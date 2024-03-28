@@ -1,5 +1,7 @@
 package ch14;
 
+import java.sql.Struct;
+
 //1.사용자 일반 예외
 class MyException extends Exception {
     public MyException() {

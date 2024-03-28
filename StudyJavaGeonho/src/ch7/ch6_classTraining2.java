@@ -1,4 +1,4 @@
-package ch7.ch7;
+package ch7;
 
 public class ch6_classTraining2 {
     public static void main(String[] args) {

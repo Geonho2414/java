@@ -1,4 +1,4 @@
-package ch7.ch7;
+package ch7;
 
 public class ch6_classTraining1 {
     static int a = 1;

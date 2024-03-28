@@ -1,4 +1,4 @@
-package ch7.ch7;
+package ch7;
 
 public class ch6_classTraining {
     private String name;
@@ -17,9 +17,7 @@ public class ch6_classTraining {
     //getter : 읽는 녀석 read
     //setter : 쓰는 녀석 write
     //안쓰면 에러남 주의
-    public String getName() {
-        return name;
-    }
+    public String getName() {return name;}
 
     public void setName(String name) {
         this.name = name;
