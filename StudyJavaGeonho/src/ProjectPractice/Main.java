@@ -25,6 +25,7 @@ public class Main {
         User user5 = new User("Emily", "goodlife", "fashdkeuh"
                 , LocalDate.of(2001,3,23), "emily@email.com");
 
+        ArrayList<Lecture> lectures = new ArrayList<>();
         Lecture lecture1 = new Lecture(1, "Java", 100
                 , "Programming", "beginner");
         Lecture lecture2 = new Lecture(2, "Spring", 150
@@ -45,9 +46,10 @@ public class Main {
         lectureRegistrations.add(lectureRegistration5);
 
 
+
         for (int i = 0; i < lectureRegistrations.size(); i++) {
             if (lectureRegistrations.get(i).getLectureId() == 1) {
-                System.out.println(lectureRegistrations.get(i).getUserId());
+                System.out.println("수강생 이름 " + lectureRegistrations.get(i).getUserId() + " / 수강생 로그인 아이디 " + lectureRegistrations.get(i).getLoginId);
 
             }
         }
