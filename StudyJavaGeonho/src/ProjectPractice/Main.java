@@ -50,8 +50,9 @@ public class Main {
 
         for (int i = 0; i < lectureRegistrations.size(); i++) {
             if (lectureRegistrations.get(i).getLectureId() == 1) {
-                System.out.print("수강생 이름 " + lectureRegistrations.get(i).getUserId() + " / ");
+                System.out.print("수강생 이름 : " + lectureRegistrations.get(i).getUserId()+ ", ");
             }
         }
+
     }
 }
