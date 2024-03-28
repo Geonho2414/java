@@ -17,22 +17,31 @@ public class Main {
         ArrayList<User> users = new ArrayList<>();
         User user1 = new User("Steve", "hero11", "pass"
                 , LocalDate.of(1999,1,1), "steve@email.com");
+        users.add(user1);
         User user2 = new User("Tom", "tommy", "12345"
                 , LocalDate.of(2001,2,5), "tom@email.com");
+        users.add(user2);
         User user3 = new User("Susie", "sue", "qwe!@"
                 , LocalDate.of(1988,5,12), "susie@email.com");
+        users.add(user3);
         User user4 = new User("Laura", "nice", "234785923"
                 , LocalDate.of(2004,11,11), "laura@email.com");
+        users.add(user4);
         User user5 = new User("Emily", "goodlife", "fashdkeuh"
                 , LocalDate.of(2001,3,23), "emily@email.com");
+        users.add(user5);
 
         ArrayList<Lecture> lectures = new ArrayList<>();
         Lecture lecture1 = new Lecture(1, "Java", 100
                 , "Programming", "beginner");
+        lectures.add(lecture1);
         Lecture lecture2 = new Lecture(2, "Spring", 150
                 , "Programming", "intermediate");
+        lectures.add(lecture2);
         Lecture lecture3 = new Lecture(3, "Javascript", 80
                 , "Programming", "beginner");
+        lectures.add(lecture3);
+
 
         ArrayList<LectureRegistration> lectureRegistrations = new ArrayList<>();
         LectureRegistration lectureRegistration1 = new LectureRegistration("hero11", 1);
@@ -47,12 +56,10 @@ public class Main {
         lectureRegistrations.add(lectureRegistration5);
 
 
-
         for (int i = 0; i < lectureRegistrations.size(); i++) {
             if (lectureRegistrations.get(i).getLectureId() == 1) {
                 System.out.print("수강생 이름 : " + lectureRegistrations.get(i).getUserId()+ ", ");
             }
         }
-
     }
 }
