@@ -3,7 +3,8 @@ package ProjectPractice;
 //해야하는 것
 // 1. 유저, 강의, 수강관리, 생성시-> ArrayList에 담기
 // 2. 강의 1번 수강생의 로그인 아이디 찾기
-// 3. 유저의 로그인 아이디로 강의 명 찾기
+// 3. 유저의 로그인 아이디로 강의명 찾기
+// 4. 강의명으로 수강생들의 이메일 찾기
 
 
 import java.time.LocalDate;
@@ -43,16 +44,12 @@ public class Main {
         LectureRegistration lectureRegistration5 = new LectureRegistration("goodlife", 1);
         lectureRegistrations.add(lectureRegistration5);
 
-        Scanner sc = new Scanner(System.in);
-        String input = sc.toString();
-        System.out.print("강의 입력 :") ;
 
-        if(input == "Java")
-        for(int i=0; i<lectureRegistrations.size(); i++) {
+        for (int i = 0; i < lectureRegistrations.size(); i++) {
             if (lectureRegistrations.get(i).getLectureId() == 1) {
                 System.out.println(lectureRegistrations.get(i).getUserId());
+
             }
         }
-
     }
 }
