@@ -14,6 +14,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        ArrayList<User> users = new ArrayList<>();
         User user1 = new User("Steve", "hero11", "pass"
                 , LocalDate.of(1999,1,1), "steve@email.com");
         User user2 = new User("Tom", "tommy", "12345"
@@ -49,8 +50,14 @@ public class Main {
 
         for (int i = 0; i < lectureRegistrations.size(); i++) {
             if (lectureRegistrations.get(i).getLectureId() == 1) {
-                System.out.println("수강생 이름 " + lectureRegistrations.get(i).getUserId() + " / 수강생 로그인 아이디 " + lectureRegistrations.get(i).getLoginId);
-
+                System.out.print("수강생 이름 " + lectureRegistrations.get(i).getUserId() + " / ");
+            }
+        }
+        for (int i = 0; i < users.size(); i++) {
+            if (users.get(i).getLoginId() == lectureRegistration1.getUserId()) {
+                System.out.println("로그인 아이디 : " + users.get(i).getLoginId());
+            } else if(users.get(i).getLoginId() != lectureRegistration1.getUserId()){
+                System.out.println("h");
             }
         }
     }
