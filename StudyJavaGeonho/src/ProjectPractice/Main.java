@@ -1,5 +1,11 @@
 package ProjectPractice;
 
+//해야하는 것
+// 1. 유저, 강의, 수강관리, 생성시-> ArrayList에 담기
+// 2. 강의 1번 수강생의 로그인 아이디 찾기
+// 3. 유저의 로그인 아이디로 강의 명 찾기
+
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
