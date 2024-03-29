@@ -1,5 +1,7 @@
 package HomeWork.HW01;
 
+import java.util.Arrays;
+
 /*  1) 아래의 필드를 가지는 Student 클래스를 선언하시오
         String name // 학생이름
         int ban // 반
@@ -71,7 +73,7 @@ class Student {
         this.math = math;
     }
 
-    public Student(){
+    public Student(String name, int ban, int no, int kor, int eng, int math) {
         this.name = name;
         this.ban = ban;
         this.no = no;
@@ -86,6 +88,17 @@ class Student {
                 + "반 / 자리 : " + this.no + "번 / 국어점수 : " + this.no
                 + "점 / 영어점수 : " + this.eng + "점 / 수학점수 : " + this.math + "점");
     }
+
+    @Override
+    public String toString() {
+        String a = (this.ban + "반 " + this.no + "번 " + this.name);
+        return a;
+    }
+
+
+    public int getAvg (){
+        return (this.kor + this.eng + this.math)/3;
+    }
 }
 
 public class Q3{
@@ -96,7 +109,14 @@ public class Q3{
 //        System.out.println(a.toString() + " : 평균 " + a.getAvg() + "점"); //1반 3번 동수 : 평균 90점
 //        System.out.println(b.toString() + " : 평균 " + b.getAvg() + "점"); //2반 10번 창수 : 평균 78점
 //        System.out.println(c.toString() + " : 평균 " + c.getAvg() + "점"); //3반 27번 영철 : 평균 86점
-        Student a = new Student();
-        a.showInfo("동수", 1, 3, 90, 80, 100);
+        Student a = new Student("동수", 1, 3, 90, 80, 100);
+        Student b = new Student("창수", 2, 10, 80, 70, 85);
+        Student c = new Student("영철", 3, 27, 95, 75, 90);
+        a.showInfo();
+        b.showInfo();
+        c.showInfo();
+        System.out.println(a.toString() + " : 평균 " + a.getAvg() + "점"); //1반 3번 동수 : 평균 90점
+        System.out.println(b.toString() + " : 평균 " + b.getAvg() + "점"); //2반 10번 창수 : 평균 78점
+        System.out.println(c.toString() + " : 평균 " + c.getAvg() + "점"); //3반 27번 영철 : 평균 86점
     }
 }

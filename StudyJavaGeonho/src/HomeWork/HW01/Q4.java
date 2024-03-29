@@ -6,7 +6,7 @@ class Answer {
     void answer (){
         System.out.println("축하합니다! 맞추셨습니다! 당신에겐 엄청난 영애와 영광, " +
                 "3번만에 100자리 수 중 하나를 맞추었다는 운의왕 칭호, " +
-                "수많은 사람들의 환호와 박수가 주어집니다.");
+                "수많은 사람들의 환호와 박수가 주어집니다." );
     }
 }
 
@@ -29,9 +29,9 @@ public class Q4 {
     public static void main(String[] args)
     {
         // 1~100사이의 임의의 값을 얻어서 answer에 저장한다.
-        int answer = (int)(Math.random() * 100) + 1;
+        int answer = 10;//(int)(Math.random() * 100) + 1;
         int input = 0; // 사용자입력을 저장할 공간
-        int count = 0; // 시도횟수를 세기위한 변수
+        int count = 1; // 시도횟수를 세기위한 변수
 
         Scanner sc = new Scanner(System.in);
         Answer answer1 = new Answer();
@@ -39,7 +39,7 @@ public class Q4 {
             System.out.print("1부터 100사이의 숫자를 입력해주세요 : ");
             input = sc.nextInt();
             //시도횟수 카운트
-            if (count == 2) {
+            if (count == 3) {
                 System.out.println("시도횟수는 3번입니다. 남은 시도횟수를 모두 소진하셨습니다.");
                 System.out.println("다음에 다시 시도해주세요");
                 break;
@@ -47,6 +47,7 @@ public class Q4 {
             //정답시
             if (input == answer) {
                 answer1.answer();
+                System.out.println("당신의 시도횟수는 " + count + "번입니다.");
                 break;
                 //정답이 아닐 시
             } else if (input < answer) {
