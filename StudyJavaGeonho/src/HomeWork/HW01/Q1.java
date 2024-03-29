@@ -1,5 +1,6 @@
 package HomeWork.HW01;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Q1 {
@@ -12,7 +13,10 @@ public class Q1 {
             입력값이 -10이면 "음수" 출력 * */
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
-        String b = (num == 0) ? "0" : (num < 0) ? "음수" : (num > 0) ? "양수" : "정수가 아닙니다.";
+        String b =
+                (num == 0) ? "0" :
+                        (num < 0) ? "음수" :
+                                (num > 0) ? "양수" : "정수가 아닙니다";
         System.out.println(b);
     }
 }
