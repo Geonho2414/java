@@ -1,6 +1,5 @@
 package ProjectPractice;
 
-// 날짜&시간을 계산해주는 LocalDate
 import java.time.LocalDate;
 
 public class User {
