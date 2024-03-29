@@ -20,4 +20,5 @@ public class Q1 {
         System.out.println(b);
     }
 }
+
 // 숙제 완료
