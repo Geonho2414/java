@@ -27,7 +27,8 @@ public class Q4 {
 
         Scanner sc = new Scanner(System.in);
         do {
-            // 여기 코드를 작성
+            input
+            if (answer == )
         } while(true); // 무한반복문
     }
 }
