@@ -18,8 +18,25 @@ public class Q2 {
         Scanner sc = new Scanner(System.in);
         System.out.println("화씨를 섭씨로 바꾸려면 1, 섭씨를 화씨로 바꾸려면 2를 선택 : ");
         int input = sc.nextInt();
-        System.out.println("온도를 입력하시오 : ");
-        double temp = sc.nextDouble();
-        double result;
+        while (input == input){
+            if (input == 1) {
+                System.out.println("온도를 입력하시오 : ");
+                double temp = sc.nextDouble();
+                double result;
+                result = 5*(temp - 32) / 9;
+                System.out.println("화씨 " + temp + "도는 섭씨 " + result + "도");
+                break;
+            } else if (input == 2) {
+                System.out.println("온도를 입력하시오 : ");
+                double temp = sc.nextDouble();
+                double result;
+                result = ((9 * temp) / 5) + 32;
+                System.out.println("섭씨 " + temp + "도는 화씨 " + result + "도");
+                break;
+            } else {
+                System.out.println("1이나 2 둘중 하나를 선택해주세요");
+                input = sc.nextInt();
+            }
+        }
     }
 }
