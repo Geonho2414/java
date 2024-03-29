@@ -2,6 +2,14 @@ package HomeWork.HW01;
 
 import java.util.Scanner;
 
+class Answer {
+    void answer (){
+        System.out.println("축하합니다! 맞추셨습니다! 당신에겐 엄청난 영애와 영광, " +
+                "3번만에 100자리 수 중 하나를 맞추었다는 운의왕 칭호, " +
+                "수많은 사람들의 환호와 박수가 주어집니다.");
+    }
+}
+
 public class Q4 {
     /*
         1) answer값보다 큰 수를 입력했을 경우에는 "더 작은 수를 입력하세요"를 출력하고
@@ -26,25 +34,27 @@ public class Q4 {
         int count = 0; // 시도횟수를 세기위한 변수
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("숫자를 입력해주세요 : ");
-        input = sc.nextInt();
-        do {
-            if (input == answer) {
-                System.out.println("맞추셨습니다.");
-                break;
-            } else if (count==2) {
+        Answer answer1 = new Answer();
+        while (count<3) {
+            System.out.print("1부터 100사이의 숫자를 입력해주세요 : ");
+            input = sc.nextInt();
+            //시도횟수 카운트
+            if (count == 2) {
                 System.out.println("시도횟수는 3번입니다. 남은 시도횟수를 모두 소진하셨습니다.");
                 System.out.println("다음에 다시 시도해주세요");
                 break;
+            }
+            //정답시
+            if (input == answer) {
+                answer1.answer();
+                break;
+                //정답이 아닐 시
             } else if (input < answer) {
                 System.out.print("더 큰 수를 입력하세요 : ");
-                input = sc.nextInt();
-                count++;
             } else if (input > answer) {
                 System.out.print("더 작은 수를 입력하세요 : ");
-                input = sc.nextInt();
-                count++;
             }
-        } while(input == input);
+            count++;
+        }
     }
 }
