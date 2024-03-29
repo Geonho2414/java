@@ -120,3 +120,5 @@ public class Q3{
         System.out.println(c.toString() + " : 평균 " + c.getAvg() + "점"); //3반 27번 영철 : 평균 86점
     }
 }
+
+// 숙제 완료
