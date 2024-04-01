@@ -29,7 +29,7 @@ public class Q4 {
     public static void main(String[] args)
     {
         // 1~100사이의 임의의 값을 얻어서 answer에 저장한다.
-        int answer = 10;//(int)(Math.random() * 100) + 1;
+        int answer = (int)(Math.random() * 100) + 1;
         int input = 0; // 사용자입력을 저장할 공간
         int count = 1; // 시도횟수를 세기위한 변수
 
