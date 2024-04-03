@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 interface Condition {
-    String test(String str);
+    boolean test(String str);
 }
 public class LambdaExample2 {
     public static void main(String[] args) {
@@ -14,5 +14,20 @@ public class LambdaExample2 {
         strings.add("grape");
         strings.add("orange");
         strings.add("kiwi");
+
+        //길이가 5이상인 문자열을 필터링하는 기능
+        System.out.println("길이가 5 이상인 문자열 : ");
+        filterAndPrint(strings, (str)->{ return str.length() > 5; });
+        //문자열이 'a'로 시작하는 아이템을 필터링하는 기능
+        System.out.println("a로 시작하는 문자열 : ");
+        filterAndPrint(strings, (str) -> str.startsWith("a"));
+    }
+
+    public static void filterAndPrint(List<String> items, Condition condition) {
+        for(String item : items) {
+            if (condition.test(item)){
+                System.out.println(item);
+            }
+        }
     }
 }
