@@ -24,10 +24,13 @@ public class LambdaExample2 {
     }
 
     public static void filterAndPrint(List<String> items, Condition condition) {
+        // 일반적인 for loop 사용 예시
         for(String item : items) {
             if (condition.test(item)){
                 System.out.println(item);
             }
         }
+        //함수형 프로그래밍으로 반복문을 처리하는 예시(결과는 위와 동일)
+        items.stream().filter(condition::test).forEach(System.out::println);
     }
 }
