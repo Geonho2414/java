@@ -35,6 +35,5 @@ public class ch18_2_2_instanceMethodType {
         AA2 aa2 = (String str) -> System.out.println(str);
         AA2 aa3 = System.out::println;
         aa3.methodAA2("이것은 무리수");
-
     }
 }
