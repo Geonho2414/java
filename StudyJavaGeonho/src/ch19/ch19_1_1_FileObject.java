@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Arrays;
 
 public class ch19_1_1_FileObject {
-    public static final String CURRENT =
+    public static String CURRENT =
             "C:/Users/admin/Documents/GitHub/java/StudyJavaGeonho/temp";
     public static void main(String[] args) {
         String currentPath = System.getProperty("user.dir");
