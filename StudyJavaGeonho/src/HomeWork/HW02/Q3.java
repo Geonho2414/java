@@ -12,10 +12,17 @@ public class Q3 {
         Scanner scan = new Scanner(System.in);
         List<String> ListUntil5 = new ArrayList<>();
         System.out.println("문자열 5개를 입력하세요 : ");
-        for (int i = 0; i < 5; i++) {
+        while (ListUntil5.size() < 5) {
             String input = scan.nextLine();
-            if(input == input)
-            ListUntil5.add(input);
+            //중복 거르기
+            if (!ListUntil5.contains(input)) {
+                //저장하기
+                ListUntil5.add(input);
+            } else {
+                System.out.println("이미 입력된 문자열입니다. 다른 문자열을 입력하세요 : ");
+            }
         }
+        System.out.println("저장된 문자열 : " + ListUntil5);
     }
+    //숙제완료
 }
