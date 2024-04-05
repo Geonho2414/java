@@ -29,27 +29,28 @@ public class Q4 {
     public static void main(String[] args)
     {
         // 1~100사이의 임의의 값을 얻어서 answer에 저장한다.
-        int answer = (int)(Math.random() * 100) + 1;
+        int answer = 10;//(int)(Math.random() * 100) + 1;
         int input = 0; // 사용자입력을 저장할 공간
         int count = 1; // 시도횟수를 세기위한 변수
 
         Scanner sc = new Scanner(System.in);
         Answer answer1 = new Answer();
-        while (count<3) {
+        while (count<4) {
             System.out.print("1부터 100사이의 숫자를 입력해주세요 : ");
             input = sc.nextInt();
-            //시도횟수 카운트
-            if (count == 3) {
-                System.out.println("시도횟수는 3번입니다. 남은 시도횟수를 모두 소진하셨습니다.");
-                System.out.println("다음에 다시 시도해주세요");
-                break;
-            }
+
             //정답시
             if (input == answer) {
                 answer1.answer();
                 System.out.println("당신의 시도횟수는 " + count + "번입니다.");
                 break;
                 //정답이 아닐 시
+                // 시도횟수 카운트
+            }else if (count == 3) {
+                    System.out.println("시도횟수는 3번입니다. 남은 시도횟수를 모두 소진하셨습니다.");
+                System.out.println("다음에 다시 시도해주세요");
+                break;
+
             } else if (input < answer) {
                 System.out.print("더 큰 수를 입력하세요 : ");
             } else if (input > answer) {
