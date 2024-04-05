@@ -126,8 +126,8 @@ public class Q4 {
 
         // 여기 코드 작성 !!
         for (int i = 0; i < carList.size(); i++) {
-            MyCar car = carList.get(i);
-            cars[i] = new SimpleCarInfo(car.getModel(), car.getColor());
+            MyCar carClass = carList.get(i);
+            cars[i] = new SimpleCarInfo(carClass.getModel(), carClass.getColor());
         }
 
         return cars;
