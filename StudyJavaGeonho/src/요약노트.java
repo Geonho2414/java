@@ -2,8 +2,9 @@ public class 요약노트 {}
 /*
 엔티티 = 클래스를 데이터베이스에 결합시키는 단계에서는 엔티티라고 부른다.
 
-다 대 다 / 다 대 1
-Many to many / Many to one
+다 대 다 / 다 대 1 / 1 대 1
+Many to many / Many to one / One to one
+ex ) 강의:학생 / 강의:교사 / 취준생:이력서
 
 클래스 : 붕어빵 기계
 -필드
