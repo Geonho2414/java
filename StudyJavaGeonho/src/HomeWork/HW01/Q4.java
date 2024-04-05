@@ -44,13 +44,12 @@ public class Q4 {
                 answer1.answer();
                 System.out.println("당신의 시도횟수는 " + count + "번입니다.");
                 break;
-                //정답이 아닐 시
                 // 시도횟수 카운트
             }else if (count == 3) {
                     System.out.println("시도횟수는 3번입니다. 남은 시도횟수를 모두 소진하셨습니다.");
                 System.out.println("다음에 다시 시도해주세요");
                 break;
-
+            //정답이 아닐 시
             } else if (input < answer) {
                 System.out.print("더 큰 수를 입력하세요 : ");
             } else if (input > answer) {
