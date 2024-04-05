@@ -15,8 +15,7 @@ public class Q1 {
         int num = sc.nextInt();
         String b =
                 (num == 0) ? "0" :
-                        (num < 0) ? "음수" :
-                                (num > 0) ? "양수" : "정수가 아닙니다";
+                        (num < 0) ? "음수" : "양수";
         System.out.println(b);
     }
 }
